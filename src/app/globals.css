@@ -147,12 +147,16 @@ body {
   height: calc(100% - 3px); width: calc(100% - 3px);
   margin: 1.5px; border-radius: 19px;
   border: 1px solid rgba(255, 255, 255, 0.03);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transition: all 0.4s ease;
 }
 .card-glow {
   position: absolute; inset: 0;
   background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(168, 85, 247, 0.18), transparent 60%);
   opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+}
+.swirl-container:hover .swirl-inner {
+  box-shadow: 0 0 40px var(--primary-glow);
 }
 .swirl-container:hover .card-glow { opacity: 1; }
 
@@ -316,8 +320,8 @@ body {
 /* Light swirl cards */
 [data-theme="light"] .swirl-inner {
   background: #ffffff !important;
-  border: 1px solid rgba(8, 145, 178, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 30, 60, 0.04);
+  border: 1px solid rgba(8, 145, 178, 0.12);
+  box-shadow: 0 0 15px var(--primary-glow);
 }
 
 [data-theme="light"] .swirl-border {
