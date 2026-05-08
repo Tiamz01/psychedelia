@@ -82,6 +82,13 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--surface-border);
   border-radius: 20px;
+  box-shadow: 0 0 15px var(--primary-glow);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: 0 0 30px var(--primary-glow);
+  border-color: var(--primary);
 }
 
 /* Text gradients */
@@ -314,7 +321,7 @@ body {
 [data-theme="light"] .glass-panel {
   background: rgba(240, 249, 255, 0.9);
   border-color: rgba(8, 145, 178, 0.15);
-  box-shadow: 0 4px 24px rgba(0, 30, 60, 0.08);
+  box-shadow: 0 0 20px var(--primary-glow);
 }
 
 /* Light swirl cards */
