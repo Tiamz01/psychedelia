@@ -56,7 +56,7 @@ export default function Curriculum() {
               <div className="swirl-border" />
               <div className="swirl-inner p-8 md:p-9 flex flex-col h-full w-full min-h-[320px]">
                 <div className="card-glow" />
-                <div className="text-xs font-mono text-gray-600 tracking-widest mb-5">MODULE {module.number}</div>
+                <div className="text-xs font-mono text-gradient tracking-widest mb-5 font-bold">MODULE {module.number}</div>
                 <div className={cn("w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 mb-7", module.color)} style={{ boxShadow: `0 0 30px ${module.glow}` }}>
                   <div className="text-white drop-shadow-lg">{module.icon}</div>
                 </div>
