@@ -5,8 +5,10 @@ import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const saved = localStorage.getItem("psy-theme") as "dark" | "light" | null;
     if (saved) {
       setTheme(saved);
@@ -19,6 +21,12 @@ export default function ThemeToggle() {
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("psy-theme", next);
+  }
+
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-xl border border-[rgba(168,85,247,0.2)] bg-[rgba(168,85,247,0.06)]" />
+    );
   }
 
   return (
